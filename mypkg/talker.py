@@ -2,20 +2,19 @@ import rclpy
 from rclpy.node import Node
 from std_msgs.msg import Int16
 
-class Talker():          #ヘッダの下にTalkerというクラスを作成
-  def __init__(self):  # オブジェクトを作ると呼ばれる関数
-    self.pub = node.create_publisher(Int16, "countup", 10)
-    self.n = 0
-# ↑ selfはオブジェクトのこと オブジェクトにひとつパブリッシャと変数をもたせる。
+class Talker():
+    def __init__(self, node):
+        self.pub = node.create_publisher(Int16, "countup", 10)
+        self.n = 0
+        node.create_timer(0.5, self.cb) #selfをつける。
+    
+    def cb(self):      #インデントをあげてselfを引数に
+        msg = Int16()
+        msg.data = self.n     #talker -> self
+        self.pub.publish(msg) #talker -> self
+        self.n += 1           #talker -> self
+
 rclpy.init()
 node = Node("talker")
-talker = Talker()      #オブジェクトを作成（__init__が実行される。）
-
-def cb():              #関数内のnやpubをtalkerのものに変更
-  msg = Int16()
-  msg.data = talker.n
-  talker.pub.publish(msg)
-  talker.n += 1
-
-node.create_timer(0.5, cb)
+talker = Talker(node) #この一行でパブリッシャが動き出す。
 rclpy.spin(node)
