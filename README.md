@@ -43,11 +43,11 @@
    $ ros2 run mypkg listener.py
    ```
 
-   リスナーは、トーカーから受け取ったカウントを表示します。
+   リスナーは、トーカーから受け取ったカウントと、現在時刻(YYYY:MM:DD HH:MM:SS)を表示します。
    ```bash
-    [INFO] [listener]: Listen: 0
-    [INFO] [listener]: Listen: 1
-    [INFO] [listener]: Listen: 2
+    [listener]: Listen: 1, Time: 2023-12-13 09:45:53
+    [listener]: Listen: 2, Time: 2023-12-13 09:45:53
+    [listener]: Listen: 3, Time: 2023-12-13 09:45:54
    ```
 
 ### Launchファイルを使用して同時に実行
