@@ -9,7 +9,7 @@ def cb(msg):
     if hasattr(node, 'time_msg'):
         node.get_logger().info("Listen: %d, Time: %s" % (msg.data, node.time_msg.data))
     else:
-        node.get_logger().warn("Received countup message, but time_msg is not set yet.")
+        node.get_logger().warn("countupを受信しましたが、Timeがまだ設定されていません。")
 
 rclpy.init()
 node = Node("listener")
