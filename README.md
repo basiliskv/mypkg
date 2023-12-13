@@ -7,9 +7,9 @@
 
 ## インストール
 
-1. システムにROS 2がインストールされていることを確認してください。未インストールの場合は、[ROS 2のインストール手順](https://docs.ros.org/en/foxy/Installation.html)に従ってください。
+1. システムにROS 2がインストールされていることを確認してください。
 
-2. このリポジトリをROS 2のワークスペースにクローンします。
+2. このリポジトリをROS2のsrcディレクトリにクローンします。
 
    ```bash
    $ git clone https://github.com/basiliskv/ros2_mypkg.git
@@ -21,7 +21,7 @@
     $ colcon build
    ```
 
-4. ROS 2のワークスペースをソースに指定します。
+4. ROS2のワークスペースをソースに指定します。
 
    ```bash
    $ source ~/.bashrc

@@ -1,24 +1,29 @@
 import rclpy
 from rclpy.node import Node
-from std_msgs.msg import Int16
+from std_msgs.msg import Int16, String  # String型を追加
 
-class Talker():
-    def __init__(self, node):
-        self.pub = node.create_publisher(Int16, "countup", 10)
-        self.n = 0
-        node.create_timer(0.5, self.cb) #selfをつける。
-    
-    def cb(self):      #インデントをあげてselfを引数に
-        msg = Int16()
-        msg.data = self.n     #talker -> self
-        self.pub.publish(msg) #talker -> self
-        self.n += 1           #talker -> self
+import time  # 追加
 
-def main():
-    rclpy.init()
-    node = Node("talker")
-    talker = Talker(node)
-    rclpy.spin(node)
+rclpy.init()
+node = Node("talker")
+pub = node.create_publisher(Int16, "countup", 10)
+n = 0
 
-if __name__ == '__main__':
-    main()
+def cb():
+    global n
+    msg = Int16()
+    msg.data = n
+
+    # 現在時刻を取得してString型のメッセージとしてpublish
+    now = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime())
+    time_msg = String()
+    time_msg.data = now
+    time_pub.publish(time_msg)
+
+    pub.publish(msg)
+    n += 1
+
+time_pub = node.create_publisher(String, "current_time", 10)  # 追加
+
+node.create_timer(0.5, cb)
+rclpy.spin(node)
