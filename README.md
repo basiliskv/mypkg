@@ -5,28 +5,6 @@
 # テスト
 ![test](https://github.com/basiliskv/ros2_mypkg/actions/workflows/test.yml/badge.svg)
 
-## インストール
-
-1. システムにROS 2がインストールされていることを確認してください。
-
-2. このリポジトリをROS2のsrcディレクトリにクローンします。
-
-   ```bash
-   $ git clone https://github.com/basiliskv/ros2_mypkg.git
-   ```
-
-3. ROS2のトップディレクトリでパッケージをビルドします。
-
-   ```bash
-    $ colcon build
-   ```
-
-4. ROS2のワークスペースをソースに指定します。
-
-   ```bash
-   $ source ~/.bashrc
-   ```
-
 ## 使用方法
 
 ### 単独での実行
