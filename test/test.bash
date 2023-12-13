@@ -9,4 +9,4 @@ source $dir/.bashrc
 timeout 10 ros2 launch mypkg talk_listen.launch.py > /tmp/mypkg.log
 
 cat /tmp/mypkg.log |
-grep 'Listen: 10'
+grep -E 'Listen: 10, Time: [0-9]{4}-[0-9]{2}-[0-9]{2} [0-9]{2}:[0-9]{2}:[0-9]{2}'
