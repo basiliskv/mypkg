@@ -2,7 +2,7 @@
 # ROS 2マイパッケージ
 これは、2つのノード間で基本的な通信を行うROS 2のパッケージです。
 
-`talker` ノードから `countup` と `current_time` トピックにパブリッシュされたデータを`listener` ノードがサブスクライブします。
+talkerノードから `countup` と `current_time` トピックにパブリッシュされたデータをlistenerノードがサブスクライブします。
 
 
 
