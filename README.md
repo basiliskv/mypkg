@@ -9,6 +9,14 @@
 
 ![test](https://github.com/basiliskv/ros2_mypkg/actions/workflows/test.yml/badge.svg)
 
+## 実行方法
+
+   下記のコマンドを実行して、`talk_listen.launch.py`を使用してトピックのパブリッシャとサブスクライバを同時に起動します。
+
+   ```bash
+   $ ros2 launch mypkg talk_listen.launch.py
+   ```
+
 ## 使用方法
    listenerは、talkerから受け取ったカウントと、現在時刻(YYYY-MM-DD HH:MM:SS)を表示します。
    ```bash
@@ -24,13 +32,6 @@
    **current_time**
       : 時刻の文字列（YYYY-MM-DD HH:MM:SS）
 
-## 実行方法
-
-1. 下記のコマンドを実行して、`talk_listen.launch.py`を使用してトピックのパブリッシャとサブスクライバを同時に起動します。
-
-   ```bash
-   $ ros2 launch mypkg talk_listen.launch.py
-   ```
 
 
 ## ソフトウェア要件
