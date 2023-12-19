@@ -2,6 +2,10 @@
 # ROS 2マイパッケージ
 これは、2つのノード間で基本的な通信を行うROS 2のパッケージです。
 
+`talker` ノードから `countup` と `current_time` トピックにパブリッシュされたデータを`listener` ノードがサブスクライブします。
+
+
+
 
 ![test](https://github.com/basiliskv/ros2_mypkg/actions/workflows/test.yml/badge.svg)
 
@@ -13,8 +17,6 @@
     [INFO] [listener]: Listen: 3, Time: 2023-12-13 10:27:22
    ```
 ## トピック
-   `talker` ノードから `countup` と `current_time` トピックにパブリッシュされたデータを`listener` ノードがサブスクライブします。
-
 
    **countup**
       : 16ビットの符号付き整数 カウントアップデータ
