@@ -13,6 +13,7 @@
     [INFO] [listener]: Listen: 3, Time: 2023-12-13 10:27:22
    ```
 ## トピック
+   `talker` ノードから `countup` と `current_time` トピックにパブリッシュされたデータを`listener` ノードがサブスクライブします。
    **countup**
       : 16ビットの符号付き整数 カウントアップデータ
 
