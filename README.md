@@ -1,26 +1,12 @@
 
 # ROS 2マイパッケージ
-
 これは、2つのノード間で基本的な通信を行うROS 2のパッケージです。
-# テスト
 ![test](https://github.com/basiliskv/ros2_mypkg/actions/workflows/test.yml/badge.svg)
+## トピック
+   このトピックは、`talker` ノードが定期的にカウントと現在時刻をパブリッシュするためのものです。`listener` ノードがこのトピックにサブスクライブし、カウントと現在時刻の文字列を受け取ります。
+
 
 ## 使用方法
-
-### 単独での実行
-
-1. ターミナルを開き、talkerノードを実行します。
-
-   ```bash
-   $ ros2 run mypkg talker.py
-   ```
-
-2. 別のターミナルを開き、listenerノードを実行します。
-
-   ```bash
-   $ ros2 run mypkg listener.py
-   ```
-
    listenerは、talkerから受け取ったカウントと、現在時刻(YYYY-MM-DD HH:MM:SS)を表示します。
    ```bash
     [INFO] [listener]: Listen: 1, Time: 2023-12-13 10:27:21
@@ -28,7 +14,7 @@
     [INFO] [listener]: Listen: 3, Time: 2023-12-13 10:27:22
    ```
 
-### Launchファイルを使用して同時に実行
+## 実行方法
 
 1. 下記のコマンドを実行して、`talk_listen.launch.py`を使用してトピックのパブリッシャとサブスクライバを同時に起動します。
 
@@ -42,7 +28,7 @@
 
 このパッケージを使用するには、以下のソフトウェアが必要です。
 
-- Python3
+- Python 3
 - ROS 2
 
 ## テスト環境

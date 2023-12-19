@@ -1,3 +1,6 @@
+# SPDX-FileCopyrightText: 2022 Kohei Kato
+# SPDX-License-Identifier: BSD-3-Clause
+
 from setuptools import find_packages, setup
 import os                  #追加
 from glob import glob      #追加
