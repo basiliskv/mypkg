@@ -27,7 +27,6 @@
    $ ros2 launch mypkg talk_listen.launch.py
    ```
 
-   これにより、トピックのパブリッシャ（talker）とサブスクライバ（listener）が同時に起動します。
 
 ## ソフトウェア要件
 
