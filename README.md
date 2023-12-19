@@ -4,9 +4,6 @@
 
 
 ![test](https://github.com/basiliskv/ros2_mypkg/actions/workflows/test.yml/badge.svg)
-## トピック
-   このトピックは、`talker` ノードが定期的にカウントと現在時刻をパブリッシュするためのものです。`listener` ノードがこのトピックにサブスクライブし、カウントと現在時刻の文字列を受け取ります。
-
 
 ## 使用方法
    listenerは、talkerから受け取ったカウントと、現在時刻(YYYY-MM-DD HH:MM:SS)を表示します。
@@ -15,6 +12,12 @@
     [INFO] [listener]: Listen: 2, Time: 2023-12-13 10:27:21
     [INFO] [listener]: Listen: 3, Time: 2023-12-13 10:27:22
    ```
+## トピック
+   **countup**
+      : 16ビットの符号付き整数 カウントアップデータ
+
+   **current_time**
+      : 時刻の文字列（YYYY-MM-DD HH:MM:SS）
 
 ## 実行方法
 
@@ -23,6 +26,8 @@
    ```bash
    $ ros2 launch mypkg talk_listen.launch.py
    ```
+
+   これにより、トピックのパブリッシャ（talker）とサブスクライバ（listener）が同時に起動します。
 
 ## ソフトウェア要件
 
