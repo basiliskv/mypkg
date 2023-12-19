@@ -11,7 +11,7 @@
 
 ## 実行方法
 
-   下記のコマンドを実行して、`talk_listen.launch.py`を使用してトピックのパブリッシャとサブスクライバを同時に起動します。
+   下記のコマンドを実行して、`talk_listen.launch.py`を使用してトピックのパブリッシャ(talker)とサブスクライバ(listener)を同時に起動します。
 
    ```bash
    $ ros2 launch mypkg talk_listen.launch.py
